@@ -1,0 +1,39 @@
+---
+title: "FIFA World Cup Over 1.5 Goals — Quantitative Research"
+author: "Busari Aliu Oluwaseyi"
+format:
+  html:
+    toc: true
+    code-fold: true
+execute:
+  echo: true
+---
+
+## Research question
+
+Does the Over 1.5 Goals outcome demonstrate a historically persistent high-frequency pattern in FIFA World Cup matches?
+
+## Reproducible analysis
+
+Run the following from the repository root before rendering this report:
+
+```{r}
+source("R/01_clean_data.R")
+source("R/02_descriptive_analysis.R")
+source("R/03_visualizations.R")
+source("R/04_statistical_analysis.R")
+```
+
+## Overall result
+
+The historical sample contains 964 matches. The observed Over 1.5 frequency is 704 / 964 = 73.03%.
+
+The simple 95% Wald confidence interval is approximately 70.23%–75.83%.
+
+## Interpretation
+
+The result indicates a high historical frequency, but frequency is not the same as a predictive probability and does not by itself establish a profitable betting strategy. A stronger quantitative study should incorporate bookmaker odds, market-implied probabilities, match-specific predictors, transaction/margin effects, and strict time-based out-of-sample validation.
+
+For decimal odds `O` and a properly estimated match-specific probability `p`:
+
+`EV = p * O - 1`
