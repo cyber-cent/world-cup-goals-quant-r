@@ -1,62 +1,22 @@
-# FIFA World Cup Over 1.5 Goals — Quantitative Research in R
+# Archived project pointer — QuantX
 
-**Author:** Busari Aliu Oluwaseyi
+> **Active development has moved to [QuantX](https://github.com/cyber-cent/QuantX).** The central repository contains the Aliu-XtraC research note and simulation prototype, plus the World Cup Over 1.5 Goals analysis scripts and report. This repository is being kept to preserve its history and existing links.
 
-## Research question
-Does the Over 1.5 Goals outcome demonstrate a historically persistent high-frequency pattern in FIFA World Cup matches?
+## Continue here
 
-## Dataset
-The analysis uses match-level World Cup data covering 1930–2022. The working dataset should be placed at `data/matches_1930_2022.csv`.
+- [QuantX central repository](https://github.com/cyber-cent/QuantX)
+- [World Cup Goals project inside QuantX](https://github.com/cyber-cent/QuantX/tree/main/world-cup-goals)
+- [Aliu-XtraC framework research note](https://github.com/cyber-cent/QuantX/blob/main/research/aliu-xtrac-framework.md)
+- [Aliu-XtraC simulation code](https://github.com/cyber-cent/QuantX/tree/main/xtrac)
 
-> Data provenance: the supplied match CSV is treated as the analysis dataset. Tournament-level historical figures were cross-checked against World Cup History. This repository does not claim the supplied CSV is an official FIFA dataset without separate verification.
+## Research summary
 
-## Main result
-Across **964 matches**, **704** recorded at least two goals, giving an observed Over 1.5 rate of **73.03%**. A simple 95% Wald confidence interval is approximately **70.23%–75.83%**.
+The historical World Cup analysis previously reported 704 Over 1.5 outcomes from 964 matches (73.03%), with a simple 95% Wald confidence interval of approximately 70.23%–75.83%. These figures should be rerun against the underlying match-level dataset before being treated as independently reproduced.
 
-This is a historical frequency estimate, not a guaranteed future probability or proof of betting profitability.
+The match-level CSV was not present in this repository at the time of consolidation, so it could not be transferred to QuantX. Add a verified dataset at `world-cup-goals/data/matches_1930_2022.csv` in the central repository before rerunning the analysis.
 
-## Project structure
-```text
-world-cup-goals-quant-r/
-├── data/
-│   └── matches_1930_2022.csv
-├── R/
-│   ├── 01_clean_data.R
-│   ├── 02_descriptive_analysis.R
-│   ├── 03_visualizations.R
-│   └── 04_statistical_analysis.R
-├── figures/
-├── results/
-└── report/
-    └── world_cup_over15_report.qmd
-```
-
-## Run
-Install the packages once:
-
-```r
-install.packages(c("tidyverse", "scales"))
-```
-
-Then run the scripts from the repository root in order:
-
-```r
-source("R/01_clean_data.R")
-source("R/02_descriptive_analysis.R")
-source("R/03_visualizations.R")
-source("R/04_statistical_analysis.R")
-```
-
-## Quant-finance interpretation
-The research is intentionally framed as an empirical signal study. Historical frequency alone does not establish an exploitable market edge. A next-stage model should incorporate bookmaker odds, implied probabilities, margin, match-specific features, and strict time-based out-of-sample validation.
-
-For decimal odds `O` and a properly estimated match-specific probability `p`, expected value is:
-
-`EV = p * O - 1`
-
-## Additional quantitative risk research
-
-The repository also documents the **Aliu-XtraC Framework**, a proposed dual-ledger institutional risk architecture with a mathematically gated tactical buffer. The source document's reported simulation results and limitations are summarized in [`research/aliu-xtrac-framework.md`](research/aliu-xtrac-framework.md). These reported figures have not been independently reproduced; see the research note for validation requirements.
+Historical frequency is not a guaranteed future probability and does not by itself prove betting profitability. See the central repository for assumptions, validation requirements, and reproducible code.
 
 ## License
+
 MIT
