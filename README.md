@@ -54,5 +54,9 @@ For decimal odds `O` and a properly estimated match-specific probability `p`, ex
 
 `EV = p * O - 1`
 
+## Additional quantitative risk research
+
+The repository also documents the **Aliu-XtraC Framework**, a proposed dual-ledger institutional risk architecture with a mathematically gated tactical buffer. The source document's reported simulation results and limitations are summarized in [`research/aliu-xtrac-framework.md`](research/aliu-xtrac-framework.md). These reported figures have not been independently reproduced; see the research note for validation requirements.
+
 ## License
 MIT
